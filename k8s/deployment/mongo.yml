@@ -1,0 +1,22 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: db-deployment
+  labels:
+    type: db
+  namespace: 3-tier
+spec:
+  selector:
+    matchLabels:
+      type: db
+  template:
+    metadata:
+      name: db-pod
+      labels:
+        type: db
+    spec:
+      containers:
+        - name: db
+          image: mongo:6.0
+...

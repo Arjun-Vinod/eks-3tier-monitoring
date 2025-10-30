@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: frontend-service
+  labels:
+    type: service
+  namespace: 3-tier
+spec:
+  type: LoadBalancer
+  ports:
+    - targetPort: 3000
+      port: 3000
+      nodePort: 30006
+  selector:
+    type: app-frontend
+...

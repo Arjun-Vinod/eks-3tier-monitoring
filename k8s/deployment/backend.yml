@@ -1,0 +1,23 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend-deployment
+  labels:
+    type: app-backend
+  namespace: 3-tier
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      type: app-backend
+  template:
+    metadata:
+      name: backend-pod
+      labels:
+        type: app-backend
+    spec:
+      containers:
+        - name: app-backend
+          image: 782567926454.dkr.ecr.us-east-1.amazonaws.com/app-backend:v1
+...
