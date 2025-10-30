@@ -1,0 +1,254 @@
+.Hero{
+    display:flex;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    box-sizing: border-box; 
+}
+.left{
+    padding: 2rem;
+    padding-top: 1.5rem;
+    flex: 1;
+    display: flex;
+    background-color: #81c784;
+    flex-direction: column;
+    align-items: center;
+} 
+
+.left div:last-child {
+  margin-top: auto; 
+  text-align: center;
+}
+.right{
+    flex: 4;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: #f5fff5;
+}
+.left :nth-child(1){
+    font-size: 1.5rem;
+    color: #2e2e2e;
+}
+.btn{
+    background-color: #4caf50;
+    padding: 0.5em;
+    font-weight: bold;
+    border:4px solid transparent;
+    transition: 300ms all;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    border-radius: 5px;
+    color:#f5fff5 ;
+}
+.btn:hover{
+  cursor: pointer;
+}
+
+.task-heading {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  width: 100%; 
+}
+
+.task-heading h1{
+  display: flex;
+  background-color: #81c784;
+  margin-left: 0;
+  padding: 5px;
+  border-top-right-radius: 10px; 
+  border-bottom-right-radius: 10px; 
+  font-size: 20px;
+}
+.form-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0 4px 6px #0000001a;
+  border-radius: 10px;
+  z-index: 1000;
+}
+  
+.task-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+  
+.task-form h2 {
+  margin-bottom: 10px;
+}
+.task-form label {
+  display: flex;
+  flex-direction: column;
+}
+.task-form input,
+.task-form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.task-form input[type="text"],
+.task-form input[type="date"] {
+  font-size:20px;
+}
+.task-form textarea[name="description"] {
+  font-size: 20px; 
+}
+
+.task-form .btn {
+  align-self: flex-end;
+  }
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #333;
+  }
+  
+.close-btn:hover {
+  color: #ff0000;
+}
+
+.task-items {
+  border: 1px solid #ccc; 
+  margin-bottom: 10px; 
+  padding: 15px; 
+  border-radius: 5px; 
+  background-color:#f5fff5;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color:#2e2e2e;
+}
+.task-item h3 {
+  font-size: 18px; 
+  margin-bottom: 5px; 
+  color: #333; 
+}
+
+.task-item p {
+  font-size: 14px; 
+  color: #555; 
+}
+.main-item{
+  display: flex;
+  justify-content: space-between;
+}
+.main-item label {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 500;
+  color: #555;
+  gap: 8px; 
+}
+.form-btns{
+  display: flex;
+  justify-content: space-between;
+}
+.form-btns button{
+  background-color: #4caf50;
+    padding: 0.5em;
+    font-weight: bold;
+    border:4px solid transparent;
+    transition: 300ms all;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    border-radius: 5px;
+    color:#f5fff5 ;
+}
+.form-btns .delete-btn:hover{
+  background-color: #ff0000;
+} 
+.form-btns .close-btn{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #333;
+}
+.form-btns .close-btn:hover{
+  color: #ff0000;
+}
+.form-btns button:hover{
+  cursor: pointer;
+}
+.editForm-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0 4px 6px #0000001a;
+  border-radius: 10px;
+  z-index: 1000;
+}
+  
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+  
+.edit-form h2 {
+  margin-bottom: 10px;
+}
+.edit-form label {
+  display: flex;
+  flex-direction: column;
+}
+.edit-form input,
+.edit-form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.edit-form input[type="text"],
+.edit-form input[type="date"] {
+  font-size:20px;
+}
+.edit-form textarea[name="description"] {
+  font-size: 20px; 
+}
+
+.edit-form .btn {
+  align-self: flex-end;
+}
+
+.check-box{
+  height: 20px;
+  width: 20px;
+}
+.no-tasks-message {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  height: 100%; 
+}
+
+.message {
+  font-size: 24px;
+  font-weight: bold;
+  color: #555; 
+  text-align: center;
+}
+
+
+
+
