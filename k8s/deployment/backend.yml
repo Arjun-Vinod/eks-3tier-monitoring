@@ -19,5 +19,5 @@ spec:
     spec:
       containers:
         - name: app-backend
-          image: 782567926454.dkr.ecr.us-east-1.amazonaws.com/app-backend:v1
+          image: <your-aws-account-id>.dkr.ecr.us-east-1.amazonaws.com/app-backend:v1
 ...
